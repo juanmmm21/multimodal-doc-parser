@@ -19,3 +19,8 @@ env/
 output_*.md
 *.output
 temp_page_*.png
+
+# Packaging
+build/
+dist/
+*.egg-info/

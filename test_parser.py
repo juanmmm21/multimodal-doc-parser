@@ -1,8 +1,8 @@
 import os
 import unittest
 from unittest.mock import MagicMock, patch
-from backend import LocalExtractBackend, VLMParserBackend
-from parser import MultimodalDocParser
+from multimodal_doc_parser.backend import LocalExtractBackend, VLMParserBackend
+from multimodal_doc_parser.parser import MultimodalDocParser
 
 class TestMultimodalDocParser(unittest.TestCase):
     """

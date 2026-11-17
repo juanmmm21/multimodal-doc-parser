@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "multimodal-doc-parser"
+version = "0.1.0"
+description = "PDF/image document parser with a local extractor and pluggable VLM backends."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Juan Martos Cuevas", email = "martoscuevasjuan@gmail.com" }]
+dependencies = [
+    "pymupdf>=1.22",
+    "pillow>=9.0",
+]
+
+[project.optional-dependencies]
+vlm = ["google-genai>=0.1", "openai>=1.0"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["multimodal_doc_parser"]
+
+[tool.pytest.ini_options]
+testpaths = ["."]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
