@@ -1,4 +1,3 @@
-import os
 import unittest
 from unittest.mock import MagicMock, patch
 from multimodal_doc_parser.backend import LocalExtractBackend, VLMParserBackend
